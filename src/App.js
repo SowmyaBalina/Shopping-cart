@@ -4,6 +4,7 @@ import Items from './components/Items';
 import Navbar from './components/Navbar';
 import itemContext, { CustomItemContext } from './ItemContext';
 import totalContext from './totalContext';
+import CartModal from './components/CartModal';
 
 function App() {
   

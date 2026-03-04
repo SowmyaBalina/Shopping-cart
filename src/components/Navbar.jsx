@@ -5,17 +5,18 @@ import { useValue } from "../ItemContext";
 
 
 function Navbar() {
-  const {total,item,clear} = useValue();
+  const {total,item,clear,toggle} = useValue();
 
-   return (
-    <div className={styles.container}>
-      <h1>Total : &#x20B9; {total}</h1>
-      <h1>Items: {item}</h1>
-      <div className={styles.buttonWrapper}>
-       <button className={styles.button} onClick = {clear}>Reset</button>
-      </div>
-      
+  return (
+   <div className={styles.container}>
+    <h1>Total : &#x20B9; {total}</h1>
+    <h1>Items: {item}</h1>
+    <div className={styles.buttonWrapper}>
+     <button className={styles.button} onClick = {clear}>Reset</button>
+     <button className = {styles.button} onClick = {toggle} style={{marginLeft: "10px"}}>Cart</button>
     </div>
+    
+   </div>
   );
 }
 
